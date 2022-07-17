@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import store from "../src/redux/store"
-import { createIncrementAction, createDecrementAction } from "./redux/count_action"
+import { createIncrementAction, createDecrementAction, createIncrementAsyncAction } from "./redux/count_action"
 export default class App extends Component {
     //  原始写法
     // state = {
@@ -57,12 +57,21 @@ export default class App extends Component {
 
         }
     }
+    // incrementAsync = () => {
+    //     const { value } = this.selectNum
+    //     setTimeout(() => {
+    //         store.dispatch(createIncrementAction(value * 1))
+    //     }, 200)
+    // }
     incrementAsync = () => {
         const { value } = this.selectNum
-        setTimeout(() => {
-            store.dispatch(createIncrementAction(value * 1))
-        }, 200)
+
+        store.dispatch(createIncrementAsyncAction(value * 1, 500))
+
     }
+
+
+    createIncrementAsyncAction
     render() {
         return (
             <div>
