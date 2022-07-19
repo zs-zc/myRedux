@@ -1,6 +1,6 @@
 
-import { INCREMENT, DECREMENT } from "./constant"
-import store from "./store"
+import { INCREMENT, DECREMENT } from "../constant"
+import store from "../store"
 
 
 export const createIncrementAction = data => ({ type: INCREMENT, data })

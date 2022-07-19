@@ -1,4 +1,4 @@
-import { createIncrementAction, createDecrementAction, createIncrementAsyncAction } from "../../redux/count_action"
+import { createIncrementAction, createDecrementAction, createIncrementAsyncAction } from "../../redux/actions/count"
 import React, { Component } from 'react'
 import { connect } from "react-redux"
 // function mapStateToProps(state) {
