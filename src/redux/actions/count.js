@@ -3,12 +3,12 @@ import { INCREMENT, DECREMENT } from "../constant"
 import store from "../store"
 
 
-export const createIncrementAction = data => ({ type: INCREMENT, data })
-export const createDecrementAction = data => ({ type: DECREMENT, data })
-export const createIncrementAsyncAction = (data, time) => {
+export const Increment = data => ({ type: INCREMENT, data })
+export const Decrement = data => ({ type: DECREMENT, data })
+export const IncrementAsync = (data, time) => {
     return () => {
         setTimeout(() => {
-            store.dispatch(createIncrementAction(data))
+            store.dispatch(Increment(data))
         }, time)
     }
 }
